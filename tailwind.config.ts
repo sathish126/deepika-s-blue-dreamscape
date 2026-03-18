@@ -57,33 +57,60 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        birthday: {
+          blue: {
+            light: "hsl(var(--birthday-blue-light))",
+            DEFAULT: "hsl(var(--birthday-blue))",
+            deep: "hsl(var(--birthday-blue-deep))",
+          },
+          glow: "hsl(var(--birthday-glow))",
+          pink: "hsl(var(--birthday-pink))",
+          gold: "hsl(var(--birthday-gold))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        display: ['Caveat', 'cursive'],
+        body: ['Quicksand', 'sans-serif'],
+      },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "pulse-heart": {
+          "0%, 100%": { transform: "scale(1)", opacity: "0.8" },
+          "50%": { transform: "scale(1.15)", opacity: "1" },
+        },
+        sparkle: {
+          "0%, 100%": { opacity: "0", transform: "scale(0) rotate(0deg)" },
+          "50%": { opacity: "1", transform: "scale(1) rotate(180deg)" },
+        },
+        rise: {
+          "0%": { transform: "translateY(100vh)", opacity: "0" },
+          "20%": { opacity: "1" },
+          "100%": { transform: "translateY(-20vh)", opacity: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        float: "float 6s ease-in-out infinite",
+        "pulse-heart": "pulse-heart 2s ease-in-out infinite",
+        sparkle: "sparkle 3s ease-in-out infinite",
+        rise: "rise 8s linear infinite",
       },
     },
   },
