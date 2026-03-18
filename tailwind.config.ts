@@ -57,6 +57,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        birthday: {
+          blue: {
+            light: "hsl(var(--birthday-blue-light))",
+            DEFAULT: "hsl(var(--birthday-blue))",
+            deep: "hsl(var(--birthday-blue-deep))",
+          },
+          glow: "hsl(var(--birthday-glow))",
+          pink: "hsl(var(--birthday-pink))",
+          gold: "hsl(var(--birthday-gold))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
